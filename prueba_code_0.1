@@ -1,0 +1,44 @@
+                                                     // ** STRINGS 2 ** \\
+
+// Caracteres [: Character] - sirve para representar simbolos especiales como string *Buscar códigos de Unicode* [https://symbl.cc/es/unicode-table/#enclosed-alphanumerics]
+let myCharacter = "\u{E9}" // En esta linea estamos representando el acento de la letra E (é)
+let mySimbolCharacter = "\u{24}" // En esta linea estamos representando el simbolo del dolar ($)
+
+// Caracteres especiales (\n, \r, \t, \0, \') *Investigar que hace cara caracter*
+let myJumCharacter = "Esto es una prueba de\n salto de linea" // Con este caracter especial (\n) podemos hacer un salto de linea
+
+// Emojis
+let myEmojiNormal = "😃" // Escribiendo asi los emojis, no hay problema; Swift lo entiende y no da ERROR
+let myEmojiUnicode = "\u{1F496}" // Se pueden escribir emojis con códigos Unicode, aunque no es necesario
+
+// Concatenación - Básicamente se trata de juntar frases
+var myConcaten = "Vamos a unir" + " " + "esta frase" // Si ponemos [+ " " +] lo que hacemos es crear un espacio, ya que si no lo ponemos, la frase seria asi: Vamos a uniresta frase
+myConcaten += " " + "y asi podemos hacer que siga la frase" // Para realizar esto tenemos que hacer con VAR, no con LET; ya que let es una constante y lo que está escrito, asi queda.
+let name = "Diego Maseda"
+let country = "España"
+let myPersonalInfo = "Mi nombre es " + name + " y resido en " + country // Esto esd lo que podemos hacer para juntar varias variables y constantes peeeerooo es un rollo asique vamos a ver la Interpolación
+
+// Interpolación - básicamente se trata de hacer varias concanetaciones lo mas eficaz y sencillo posible, es tan básico como poner \(dato) delante del tecto para añadir
+let myPersonalInfoWithInterpolation = "Mi nombre es \(name) y resido en \(country)"
+
+// Comparación
+let name1 = "Juan"
+let name2 = "Julia"
+name1 == name2 // Como se puede observar, comparamos los resultados y nos da false ya que el name1 no es igual a name2
+let name3 = "Juan"
+name1 == name3 // En este caso, los 2 nombres tienen el mismo valor por lo que es true
+
+// Contenido - para comprobar si en una linea tenemos el contenido que andamos buscando
+let myContent = "Mi nombre es Juan"
+myContent.contains(name1) // ¿Entendimos? Digamos que en este caso al poner [.contains()] hacemos una "búsqueda" de lo que queremos y si lo encuentra, nos da true; si no, nos daría false como en  el ejemplo de aqui abajo:
+myContent.contains(name2)
+
+// Vacia - para comprobar cadenas vacias (mismo que anteriores 2 secciones)
+let myEmptyString = ""
+myEmptyString == ""
+myEmptyString.isEmpty
+
+// Recorrido - sirve para recorrer caracter a caracter de nuestro string
+for valor in myContent {
+    print(valor)
+}
